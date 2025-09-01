@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 # --- PHẦN 1: CẤU HÌNH ---
 # Dán GitHub Personal Access Token của bạn vào đây.
 # Token cần quyền 'repo' để đọc và ghi vào kho lưu trữ.
-GITHUB_TOKEN = "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linh"
+GITHUB_TOKEN = "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"
 
 # URL mặc định của kho lưu trữ GitHub.
 DEFAULT_REPO_URL = "https://github.com/linhlinh897986/Truyen_SRT"
