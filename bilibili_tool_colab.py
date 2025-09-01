@@ -280,7 +280,7 @@ def processing_thread_func(stop_event, github_details):
                     subtitles = parse_srt(merged_content)
                     if not subtitles: print(f"⚠️ [Luồng 2] Không có khối SRT: {merged_filename}"); processed_files.add(filename); continue
                     prompt_text = "\n".join([f"[{sub['index']}] {sub['text'].replace(os.linesep, ' ')}" for sub in subtitles])
-                    full_prompt = f"Dịch các dòng phụ đề sau sang ngôn ngữ '{TARGET_LANGUAGE}'. Giữ nguyên định dạng [số]:\n{prompt_text}"
+                    full_prompt = f"Dịch các dòng phụ đề sau từ tiếng trung sang ngôn ngữ '{TARGET_LANGUAGE}'. Giữ nguyên định dạng '[số] nội dung' hoặc [số][SPEAKER_xx]: nội dung.\n{prompt_text}"
                     gemini_output = call_gemini_cli(full_prompt, CONTEXT_DIR)
                     translated_texts = parse_gemini_output(gemini_output)
                     new_srt_content = build_new_srt(subtitles, translated_texts)
