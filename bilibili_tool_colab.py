@@ -181,7 +181,7 @@ def parse_srt(content):
     return [{'index': m[0], 'start': m[1], 'end': m[2], 'text': m[3].strip()} for m in matches]
 
 def call_gemini_cli(prompt_text, context_dir):
-    command = f'gemini -a --include-directories "{context_dir}"'
+    command = f'gemini --include-directories "{context_dir}"'
     try:
         result = subprocess.run(command, input=prompt_text, capture_output=True, text=True, check=True, encoding='utf-8', shell=True)
         return result.stdout
