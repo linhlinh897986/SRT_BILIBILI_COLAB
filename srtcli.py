@@ -4,8 +4,8 @@ import re
 import shutil
 
 # ==== Cấu hình ====
-INPUT_DIR = r"e:\youtube\tool\input_srt"    # Thay đổi đường dẫn thư mục input tại đây
-OUTPUT_DIR = r"e:\youtube\tool\output_srt"  # Thay đổi đường dẫn thư mục output tại đây
+INPUT_DIR = r"e:\OutputTQ"    # Thay đổi đường dẫn thư mục input tại đây
+OUTPUT_DIR = r"e:\OutputCau"  # Thay đổi đường dẫn thư mục output tại đây
 GAP_MS = 700                                # Ngưỡng gap giữa các câu (ms)
 CHECK_INTERVAL = 5                          # Thời gian kiểm tra lại (giây)
 
@@ -135,4 +135,5 @@ def main():
             break
 
 if __name__ == "__main__":
+
     main()
